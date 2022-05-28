@@ -1,0 +1,1 @@
+caprover deploy -h $INPUT_SERVER -p $INPUT_PASSWORD -i $INPUT_IMAGE -a $INPUT_APPNAME

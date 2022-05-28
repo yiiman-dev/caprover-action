@@ -1,6 +1,6 @@
 name: 'CapRover Deploy'
 description: 'Action to deploy on Caprover server'
-author: 'Alexey Schebelev'
+author: 'Alexey Schebelev|YiiMan'
 branding:
   icon: upload-cloud
   color: orange
@@ -18,6 +18,15 @@ inputs:
     description: 'Branch which will be deployed'
     required: false
     default: 'master'
+  mode:
+    description: 'Mode of execution action, git | docker'
+    required: true
+    default: 'git'
+  image:
+    description: 'caprover-action will be use this option as docker image for fastest deploy on caprover server.It should either exist on server, or it has to be public, or on a private repository that CapRover has access to'
+    required: false
+    default: 'master'
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
